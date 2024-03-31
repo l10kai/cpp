@@ -14,10 +14,10 @@
 */
 #include <bits/stdc++.h>
 #define mem(x,y) memset(x,y,sizeof(x))
-#define all(x) x.begin(),x.end()
+#define all(x) x.begin() ,x.end()
 #define rall(v) v.rbegin(),v.rend()
 #define sqr(x) ((x)*(x))
-#define mod 998244353
+#define as static_cast
 #define fi first
 #define se second
 #define pb push_back
@@ -47,17 +47,17 @@ using namespace MATH;
 using namespace std;
 using i64 = long long;
 
-void solve(){
+void solve(){    
 
 }
 
-int main(){
+signed main(){
 
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
-    cout.tie(nullptr);
+    //cout.tie(nullptr);
 
-    int t;
+    int t = 1;
     cin >> t;
     while(t--){
         solve();
