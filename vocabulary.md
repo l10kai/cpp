@@ -1,4 +1,4 @@
-### A
+# Vocabulary
 
 abbreviation [数学] 约分;
 activity on edge [AOE网](https://so.csdn.net/so/search?q=AOE网&spm=1001.2101.3001.7020)
@@ -57,7 +57,7 @@ calculate计算
 Calendrical Calculations 日期
 carpet 地毯
 chariot 战车（中国象棋）
-checkmate (国际象棋） 将死; 输棋，将死; 败局; 败北，挫败;
+checkmate (国际象棋) 将死; 输棋，将死; 败局; 败北，挫败;
 circular linked list 循环链表
 cirular queue 循环队列
 Clique 最大团
