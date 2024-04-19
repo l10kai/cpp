@@ -1,0 +1,161 @@
+{
+  "main": {
+    "id": "a2095bfdd8fb49b0",
+    "type": "split",
+    "children": [
+      {
+        "id": "d723f1e09d2f03db",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "57bf4f52e8d9658a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "typora常用快捷键.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "39fbe7373126c62b",
+    "type": "split",
+    "children": [
+      {
+        "id": "515e7da501e6c2fc",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "7c8294e05154388c",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "1032f54cf0bdd88f",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "8299c3c8be173a08",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "4c113d9d53658264",
+    "type": "split",
+    "children": [
+      {
+        "id": "0b3713d38b694046",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "0b0ba6132c73a56f",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "typora常用快捷键.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "4a83249d2d0d6ea4",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "typora常用快捷键.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "7131e86d7f6aec76",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "1fe52230202cfce2",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "typora常用快捷键.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false
+    }
+  },
+  "active": "57bf4f52e8d9658a",
+  "lastOpenFiles": [
+    "格式化输出.md",
+    "1. STL容器：.md",
+    "进制转化.md",
+    "实用函数.md",
+    "心得.md",
+    "位运算.md",
+    "时间复杂度.md",
+    "typora常用快捷键.md",
+    "c++/搜索与图论/搜索与图论（1）总结.md"
+  ]
+}
