@@ -13,7 +13,7 @@ void merge_sort(int a[],int l,int r){
     if(l>=r) return;
     int mid =l+r>>1;
 
-    merge_sort(a,l,mid),merge_sort(a,mid+1,r);
+    merge_sort(a,l,mid),merge_sort(a,mid+1,r); //递归
     //以下为关键函数
     int k=0,i=l,j=mid +1;
     while(i<=mid &&j<=r)
@@ -25,4 +25,12 @@ void merge_sort(int a[],int l,int r){
 
     for(i =l,j=0;i<=r;i++,j++) q[i]=tmp[j];
 
+}
+
+signed main() {
+
+  sort();
+
+
+  return 0;
 }
