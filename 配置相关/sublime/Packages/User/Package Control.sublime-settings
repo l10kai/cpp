@@ -1,0 +1,18 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"BracketHighlighter",
+		"ChineseLocalizations",
+		"ConvertToUTF8",
+		"CppFastOlympicCoding",
+		"LSP",
+		"LSP-clangd",
+		"LSP-json",
+		"Package Control",
+		"Transparency",
+	],
+}

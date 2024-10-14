@@ -1,0 +1,9 @@
+// Settings in here override those in "LSP-clangd/LSP-clangd.sublime-settings"
+{
+	"initializationOptions": {
+		// 启用clang-tidy代码检查，可能启用后warning会比较多，自己看着办吧
+		"clangd.clang-tidy": true,
+		// 美化clangd输出的JSON
+		"clangd.pretty": true,
+	}
+}

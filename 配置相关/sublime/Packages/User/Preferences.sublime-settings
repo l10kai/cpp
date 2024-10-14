@@ -1,0 +1,16 @@
+{
+	"ignored_packages": [		"Vintage",
+	],
+	"font_size": 18,
+	"theme": "Adaptive.sublime-theme",
+	"index_files": true,
+	"color_scheme": "Monokai.sublime-color-scheme",
+	"font_face": "Fira Code",
+	"update_check": false,
+	"ensure_newline_at_eof_on_save": true,
+	"trim_trailing_white_space_on_save": "all",
+	"save_on_focus_lost": true,
+	/*"ignored_packages": [
+		"Vintage"
+	],*/
+}

@@ -1,0 +1,8 @@
+{
+    // 在主页面只显示error红色下划线
+    //"show_diagnostics_severity_level": 1,
+    // 代码提示显示灯泡图标
+    "show_code_actions": "bulb",
+    // 保存时自动格式化
+    "lsp_format_on_save": true,
+}
