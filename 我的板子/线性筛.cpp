@@ -11,3 +11,4 @@ void get_primes(int n) {
         break;
     }
   }
+}
