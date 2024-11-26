@@ -1,0 +1,34 @@
+Test 1 Passed
+
+Input 1: 
+5
+10
+serofedsoc
+3
+ttf
+9
+tlrhgmaoi
+1
+w
+15
+hnndledmnhlttin
+
+
+Expected Output : 
+codeforces
+fft
+algorithm
+w
+meetinthemiddle
+
+
+Obtained Output : 
+codeforces
+fft
+algorithm
+w
+meetinthemiddle
+
+
+________________________________________________________
+

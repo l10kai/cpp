@@ -1,0 +1,26 @@
+Test 1 Failed
+
+Input 1: 
+4
+a
+aaa
+abb
+password
+
+
+Expected Output : 
+wa
+aada
+abcb
+pastsword
+
+
+Obtained Output : 
+ab
+abaa
+abab
+pasasword
+
+
+________________________________________________________
+
