@@ -53,9 +53,6 @@ int main() {
     cin >> x >> y;
     int tmp = LCA(x, y);
     cout << tmp << '\n';
-    // if(x == tmp) printf("1\n");
-    // else if(y==tmp) printf("2\n");
-    // else printf("0\n");
   }
   return 0;
 }
