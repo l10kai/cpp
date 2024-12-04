@@ -1,0 +1,34 @@
+Test 1 Passed
+
+Input 1: 
+5
+4
+12ac
+5
+123wa
+9
+allllmost
+5
+ac123
+6
+011679
+
+
+Expected Output : 
+YES
+NO
+YES
+NO
+YES
+
+
+Obtained Output : 
+YES
+NO
+YES
+NO
+YES
+
+
+________________________________________________________
+

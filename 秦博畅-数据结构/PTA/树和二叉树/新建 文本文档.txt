@@ -1,0 +1,109 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+const int N = 1e5 + 10;
+int n, m;
+vector<vector<int>> g;
+
+int fa[N][17], depth[N], lg[N];
+void init() {
+    for (int i = 1; i <= n; ++i)
+        lg[i] = lg[i - 1] + (1 << lg[i - 1] == i);
+}
+void dfs(int cur, int father) {
+    fa[cur][0] = father;
+    depth[cur] = depth[father] + 1;
+    for (int i = 1; i <= lg[depth[cur]]; ++i) {
+        fa[cur][i] = fa[fa[cur][i - 1]][i - 1];
+    }
+    for (auto i : g[cur]) {
+        if (i != father)
+            dfs(i, cur);
+    }
+}
+int LCA(int x, int y) {
+    if (depth[x] < depth[y])
+        swap(x, y);              // 不妨假设x深度更大
+    while (depth[x] > depth[y])  // 跳到同一深度
+    {
+        x = fa[x][lg[depth[x] - depth[y]] - 1];
+    }
+    if (x == y)
+        return x;
+    for (int k = lg[depth[x]] - 1; k >= 0; --k)  // 跳到LCA下边一层
+    {
+        if (fa[x][k] != fa[y][k]) {
+            x = fa[x][k], y = fa[y][k];
+        }
+    }
+    return fa[x][0];
+}
+int root;
+
+void buildTree(const vector<int> &inorder, const vector<int> &postorder,
+               int inStart, int inEnd, int postStart, int postEnd,
+               unordered_map<int, int> &inIndex) {
+    if (inStart > inEnd || postStart > postEnd)
+        return;
+
+    int rootVal = postorder[postEnd];  // 当前子树的根节点值
+    int rootPos = inIndex[rootVal];    // 根节点在中序遍历中的位置
+
+    int leftSize = rootPos - inStart;  // 左子树的节点数量
+
+    // 如果左子树存在，添加左子节点
+    if (leftSize > 0) {
+        int leftChildVal = postorder[postStart + leftSize - 1];
+        g[rootVal].push_back(leftChildVal);  // 假设边从父指向子
+        buildTree(inorder, postorder, inStart, rootPos - 1, postStart,
+                  postStart + leftSize - 1, inIndex);
+    }
+
+    // 如果右子树存在，添加右子节点
+    int rightSize = inEnd - rootPos;
+    if (rightSize > 0) {
+        int rightChildVal = postorder[postEnd - 1];
+        g[rootVal].push_back(rightChildVal);  // 假设边从父指向子
+        buildTree(inorder, postorder, rootPos + 1, inEnd, postStart + leftSize,
+                  postEnd - 1, inIndex);
+    }
+}
+
+signed main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    cin >> n >> m;
+
+    vector<int> mot(n), bwt(n);  // 中序遍历和后序遍历的结果
+
+    for (auto &x : bwt)
+        cin >> x;
+    for (auto &x : mot)
+        cin >> x;
+
+    g.resize(N);
+
+    // 构建中序遍历值到索引的映射，便于快速查找根节点位置
+    unordered_map<int, int> inIndex;
+    for (int i = 0; i < n; ++i) {
+        inIndex[mot[i]] = i;
+    }
+
+    buildTree(mot, bwt, 0, n - 1, 0, n - 1, inIndex);
+
+    init();
+    root = bwt[n - 1];
+    dfs(root, 0);
+
+    while (m--) {
+        int x, y;
+        cin >> x >> y;
+        int ans = LCA(x, y);
+        if (!ans)
+            cout << "ERROR" << endl;
+        else
+            cout << ans << endl;
+    }
+    return 0;
+}

@@ -1,0 +1,16 @@
+D:\CLion\bin\cmake\win\x64\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=D:/CLion/bin/ninja/win/x64/ninja.exe "-DCMAKE_C_COMPILER=D:/Microsoft Visual Studio/2022/Preview/VC/Tools/Llvm/x64/bin/clang-cl.exe" "-DCMAKE_CXX_COMPILER=D:/Microsoft Visual Studio/2022/Preview/VC/Tools/Llvm/x64/bin/clang-cl.exe" -G Ninja -S E:\Cpp\clion\student_tmp -B E:\Cpp\clion\student_tmp\cmake-build-debug
+-- The C compiler identification is Clang 17.0.3 with MSVC-like command-line
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: D:/Microsoft Visual Studio/2022/Preview/VC/Tools/Llvm/x64/bin/clang-cl.exe - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Configuring done (1.6s)
+-- Generating done (0.0s)
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    CMAKE_CXX_COMPILER
+
+
+-- Build files have been written to: E:/Cpp/clion/student_tmp/cmake-build-debug

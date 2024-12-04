@@ -1,0 +1,56 @@
+Test 1 Failed
+
+Input 1: 
+null
+
+null
+
+null
+
+null
+
+null
+
+null
+
+null
+
+null
+
+null
+
+null
+
+null
+
+null
+
+
+
+Expected Output : 
+6
+
+
+Obtained Output : 
+
+
+________________________________________________________
+
+Test 2 Failed
+
+Input 2: 
+null
+
+null
+
+
+
+Expected Output : 
+1
+
+
+Obtained Output : 
+
+
+________________________________________________________
+
