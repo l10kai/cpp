@@ -20,10 +20,10 @@
 #define pii pair<int, int>
 #define pll pair<i64, i64>
 
-#define cin  fin
-#define cout fout
-std::ifstream fin("./in.txt");
-std::ofstream fout("./out.txt");
+// #define cin fin
+// #define cout fout
+// std::ifstream fin("E:/Cpp/duipai/in.txt");
+// std::ofstream fout("E:/Cpp/duipai/out.txt");
 
 using namespace std;
 using i64 = int64_t;
@@ -32,26 +32,43 @@ using u64 = uint64_t;
 const char &ln = '\n';
 
 void solve() {
-    string n;
+    int n;
     cin >> n;
+    i64 cnt1 = 0, cnt2 = 0;
 
-    int f = 1;
-    for (auto c : n) {
-        int d = c - '0';
-        int x = d * d;
-        int nf = f << d;
-        if (x < 10) {
-            nf |= f << x;
-        }
-        nf |= nf >> 9;
-        nf &= (1 << 9) - 1;
-        f = nf;
+    for (int i = 1; i <= n; i++) {
+        i64 x;
+        cin >> x;
+        if (i & 1)
+            cnt1 += x;
+        else
+            cnt2 += x;
     }
 
-    if (f & 1) {
-        cout << "YES\n";
+    if (n & 1) {
+        if (cnt1 % (n / 2 + 1) != 0) {
+            cout << "NO" << ln;
+            return;
+        }
+        cnt1 /= (n / 2 + 1);
     } else {
-        cout << "NO\n";
+        if (cnt1 % (n / 2) != 0) {
+            cout << "NO" << ln;
+            return;
+        }
+        cnt1 /= (n * 1 / 2);
+    }
+
+    if (cnt2 % (n / 2) != 0) {
+        cout << "NO" << ln;
+        return;
+    }
+    cnt2 /= (n / 2);
+
+    if (cnt1 == cnt2) {
+        cout << "YES" << ln;
+    } else {
+        cout << "NO" << ln;
     }
 }
 
@@ -65,7 +82,7 @@ signed main() {
     while (t--) {
         solve();
     }
-    fin.close();
-    fout.close();
+    // fin.close();
+    // fout.close();
     return 0;
 }

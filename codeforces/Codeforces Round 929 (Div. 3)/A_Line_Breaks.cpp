@@ -20,10 +20,10 @@
 #define pii pair<int, int>
 #define pll pair<i64, i64>
 
-#define cin  fin
-#define cout fout
-std::ifstream fin("./in.txt");
-std::ofstream fout("./out.txt");
+// #define cin fin
+// #define cout fout
+// std::ifstream fin("E:/Cpp/duipai/in.txt");
+// std::ofstream fout("E:/Cpp/duipai/out.txt");
 
 using namespace std;
 using i64 = int64_t;
@@ -32,27 +32,28 @@ using u64 = uint64_t;
 const char &ln = '\n';
 
 void solve() {
-    string n;
-    cin >> n;
+    int n, m;
+    cin >> n >> m;
+    vector<i64> a(n);
 
-    int f = 1;
-    for (auto c : n) {
-        int d = c - '0';
-        int x = d * d;
-        int nf = f << d;
-        if (x < 10) {
-            nf |= f << x;
+    for (int i = 0; i < n; i++) {
+        string str;
+        cin >> str;
+        if (i == 0) {
+            a[i] = str.size();
+            continue;
         }
-        nf |= nf >> 9;
-        nf &= (1 << 9) - 1;
-        f = nf;
+        a[i] = str.size() + a[i - 1];
     }
 
-    if (f & 1) {
-        cout << "YES\n";
-    } else {
-        cout << "NO\n";
+    for (int i = n - 1; i >= 0; i--) {
+        if (a[i] <= m) {
+            cout << i + 1 << ln;
+            return;
+        }
     }
+
+    cout << 0 << ln;
 }
 
 signed main() {
@@ -65,7 +66,7 @@ signed main() {
     while (t--) {
         solve();
     }
-    fin.close();
-    fout.close();
+    // fin.close();
+    // fout.close();
     return 0;
 }

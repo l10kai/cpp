@@ -23,7 +23,7 @@
 #define cin  fin
 #define cout fout
 std::ifstream fin("./in.txt");
-std::ofstream fout("./out.txt");
+std::ofstream fout("./baoli.txt");
 
 using namespace std;
 using i64 = int64_t;
