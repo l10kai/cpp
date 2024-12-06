@@ -48,7 +48,6 @@ void solve() {
     dp[1][0] = (a[1] != c[1]);
     dp[0][1] = (b[1] != c[1]);
 
-
     for (int i = 0; i <= n; i++) {
         for (int j = 0; j <= m; j++) {
             if (i == 0 && j == 0) {
@@ -67,7 +66,6 @@ void solve() {
                            dp[i][j - 1] + (b[j] != c[i + j]));
         }
     }
-
 
     cout << dp[n][m] << ln;
 }
