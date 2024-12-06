@@ -47,10 +47,7 @@ void solve() {
     dp[0][0] = 0ll;
     dp[1][0] = (a[1] != c[1]);
     dp[0][1] = (b[1] != c[1]);
-    cerr << "___________________________" << ln;
-    cerr << a << ln << b << ln << c << ln;
-    cerr << " dp00 " << dp[0][0] << ln;
-    cerr << dp[1][0] << " " << dp[0][1] << ln;
+
 
     for (int i = 0; i <= n; i++) {
         for (int j = 0; j <= m; j++) {
@@ -71,14 +68,6 @@ void solve() {
         }
     }
 
-    for (int i = 0; i <= n; i++) {
-        for (int j = 0; j <= m; j++) {
-            cerr << dp[i][j] << " ";
-        }
-        cerr << ln;
-    }
-
-    cerr << ln;
 
     cout << dp[n][m] << ln;
 }
